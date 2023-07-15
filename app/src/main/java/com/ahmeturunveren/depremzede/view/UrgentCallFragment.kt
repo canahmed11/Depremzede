@@ -6,21 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ahmeturunveren.depremzede.R
+import com.ahmeturunveren.depremzede.databinding.FragmentUrgentCallBinding
 
 
 class UrgentCallFragment : Fragment() {
-
+    private var _binding:FragmentUrgentCallBinding?=null
+    private val binding get()=_binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_urgent_call, container, false)
+    ): View {
+        _binding=FragmentUrgentCallBinding.inflate(inflater,container,false)
+        val view=binding.root
+        return view
     }
 
 

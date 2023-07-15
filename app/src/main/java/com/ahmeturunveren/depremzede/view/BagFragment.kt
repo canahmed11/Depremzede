@@ -6,21 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ahmeturunveren.depremzede.R
+import com.ahmeturunveren.depremzede.databinding.FragmentBagBinding
 
 
 class BagFragment : Fragment() {
-
+    private var _binding:FragmentBagBinding?=null
+    private val binding get()=_binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bag, container, false)
+    ): View {
+        _binding=FragmentBagBinding.inflate(inflater,container,false)
+        val view=binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
     }
 
 
