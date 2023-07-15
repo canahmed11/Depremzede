@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.ahmeturunveren.depremzede.R
 
 
-class UrgentCallFragment : Fragment() {
+class FeedFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,7 @@ class UrgentCallFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_urgent_call, container, false)
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
 

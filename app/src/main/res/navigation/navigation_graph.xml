@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/bagFragment">
 
+    <fragment
+        android:id="@+id/bagFragment"
+        android:name="com.ahmeturunveren.depremzede.view.BagFragment"
+        android:label="fragment_bag"
+        tools:layout="@layout/fragment_bag" >
+        <action
+            android:id="@+id/action_bagFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/earthquakesFragment"
+        android:name="com.ahmeturunveren.depremzede.view.EarthquakesFragment"
+        android:label="fragment_earthquakes"
+        tools:layout="@layout/fragment_earthquakes" >
+        <action
+            android:id="@+id/action_earthquakesFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.ahmeturunveren.depremzede.view.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urgentCallFragment"
+        android:name="com.ahmeturunveren.depremzede.view.UrgentCallFragment"
+        android:label="fragment_urgent_call"
+        tools:layout="@layout/fragment_urgent_call" >
+        <action
+            android:id="@+id/action_urgentCallFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/whistleFragment"
+        android:name="com.ahmeturunveren.depremzede.view.WhistleFragment"
+        android:label="fragment_whistle"
+        tools:layout="@layout/fragment_whistle" >
+        <action
+            android:id="@+id/action_whistleFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.ahmeturunveren.depremzede.view.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feedFragment_to_bagFragment"
+            app:destination="@id/bagFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_earthquakesFragment"
+            app:destination="@id/earthquakesFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_urgentCallFragment"
+            app:destination="@id/urgentCallFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_whistleFragment"
+            app:destination="@id/whistleFragment" />
+    </fragment>
 </navigation>
