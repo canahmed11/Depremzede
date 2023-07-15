@@ -7,13 +7,9 @@
     tools:context=".view.FeedFragment">
 
 
-    <TextView
-        android:id="@+id/feedFragmentTextView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="FeedFragment" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>
 </layout>
