@@ -18,7 +18,7 @@ class WhistleFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, 
+        inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
