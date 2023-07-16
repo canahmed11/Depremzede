@@ -24,6 +24,23 @@ class FeedAdapter(val feedList:ArrayList<String>):RecyclerView.Adapter<FeedAdapt
         holder.binding.feedFragmentTextView.text=feedList.get(position)
         holder.itemView.setOnClickListener {
             if(position==0){
+                val action=FeedFragmentDirections.actionFeedFragmentToEarthquakesFragment()
+                Navigation.findNavController(it).navigate(action)
+            }else if(position==1){
+                val action=FeedFragmentDirections.actionFeedFragmentToWhistleFragment()
+                Navigation.findNavController(it).navigate(action)
+            }else if(position==2){
+                val action=FeedFragmentDirections.actionFeedFragmentToFaultLineFragment()
+                Navigation.findNavController(it).navigate(action)
+            }else if(position==3){
+                val action=FeedFragmentDirections.actionFeedFragmentToBagFragment()
+                Navigation.findNavController(it).navigate(action)
+            }else if(position==4){
+                val action=FeedFragmentDirections.actionFeedFragmentToUrgentCallFragment()
+                Navigation.findNavController(it).navigate(action)
+            }else if(position==5){
+                val action=FeedFragmentDirections.actionFeedFragmentToLocationFragment()
+                Navigation.findNavController(it).navigate(action)
             }
         }
 
