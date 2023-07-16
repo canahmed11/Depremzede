@@ -1,9 +1,12 @@
 package com.ahmeturunveren.depremzede.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmeturunveren.depremzede.databinding.FeedRecyclerRowBinding
+import com.ahmeturunveren.depremzede.view.FeedFragmentDirections
 
 class FeedAdapter(val feedList:ArrayList<String>):RecyclerView.Adapter<FeedAdapter.FeedHolder>() {
     class FeedHolder(val binding: FeedRecyclerRowBinding):RecyclerView.ViewHolder(binding.root){}
@@ -19,5 +22,6 @@ class FeedAdapter(val feedList:ArrayList<String>):RecyclerView.Adapter<FeedAdapt
 
     override fun onBindViewHolder(holder: FeedHolder, position: Int) {
         holder.binding.feedFragmentTextView.text=feedList.get(position)
+
     }
 }
