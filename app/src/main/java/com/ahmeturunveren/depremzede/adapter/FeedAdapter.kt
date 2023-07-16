@@ -22,6 +22,10 @@ class FeedAdapter(val feedList:ArrayList<String>):RecyclerView.Adapter<FeedAdapt
 
     override fun onBindViewHolder(holder: FeedHolder, position: Int) {
         holder.binding.feedFragmentTextView.text=feedList.get(position)
+        holder.itemView.setOnClickListener {
+            if(position==0){
+            }
+        }
 
     }
 }

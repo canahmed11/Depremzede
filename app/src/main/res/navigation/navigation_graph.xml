@@ -51,6 +51,14 @@
             app:destination="@id/feedFragment" />
     </fragment>
     <fragment
+        android:id="@+id/faultLineFragment"
+        android:name="com.ahmeturunveren.depremzede.view.FaultLineFragment"
+        android:label="FaultLineFragment" >
+        <action
+            android:id="@+id/action_faultLineFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/feedFragment"
         android:name="com.ahmeturunveren.depremzede.view.FeedFragment"
         android:label="fragment_feed"
@@ -74,12 +82,5 @@
             android:id="@+id/action_feedFragment_to_faultLineFragment"
             app:destination="@id/faultLineFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/faultLineFragment"
-        android:name="com.ahmeturunveren.depremzede.view.FaultLineFragment"
-        android:label="FaultLineFragment" >
-        <action
-            android:id="@+id/action_faultLineFragment_to_feedFragment"
-            app:destination="@id/feedFragment" />
-    </fragment>
+
 </navigation>

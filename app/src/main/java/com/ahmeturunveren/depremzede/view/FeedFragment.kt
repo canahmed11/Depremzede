@@ -43,5 +43,9 @@ class FeedFragment : Fragment() {
         binding.feedRecyclerView.adapter=feedAdapter
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
+    }
 
 }
