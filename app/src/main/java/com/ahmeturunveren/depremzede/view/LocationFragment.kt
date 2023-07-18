@@ -27,9 +27,9 @@ class LocationFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val adana = LatLng(36.9973006, 35.1229151)
+        googleMap.addMarker(MarkerOptions().position(adana).title("Marker in Adana"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(adana,10f))
     }
 
     override fun onCreateView(
