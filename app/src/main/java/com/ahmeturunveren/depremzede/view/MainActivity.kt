@@ -2,7 +2,6 @@ package com.ahmeturunveren.depremzede.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ahmeturunveren.depremzede.R
 import com.ahmeturunveren.depremzede.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         val view=binding.root
         setContentView(view)
 
-        
+
     }
 }
